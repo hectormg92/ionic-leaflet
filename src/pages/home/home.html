@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <button ion-button 
+          *ngFor="let event of events" 
+          [navPush]="mapa" 
+          [navParams]="{'coord': event.geom.coord, 'info': event.info}" 
+          block>
+          {{event.nom}}
+  </button>
+
+</ion-content>

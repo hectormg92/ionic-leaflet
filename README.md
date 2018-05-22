@@ -1,10 +1,15 @@
 # ionic-leaflet
-Prova ionic amb leaflet
+> An ionic-angular project with leaflet stuff
 
-Install:
-  npm install
+#Build setup
+``` bash
+# install dependencies:
+  $ npm install
   
-Run:
-  ionic serve
+# serve at localhost:8100:
+  $ ionic serve
   
+# para probar en dispositivos/emulador Android:
+  $ ionic run android
+```
   

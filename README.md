@@ -1,7 +1,7 @@
 # ionic-leaflet
 > An ionic-angular project with leaflet stuff
 
-#Build setup
+# Build setup
 ``` bash
 # install dependencies:
   $ npm install

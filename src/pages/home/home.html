@@ -1,19 +1,49 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Alojamiento
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   
-  <button ion-button 
-          *ngFor="let event of events" 
-          [navPush]="mapa" 
-          [navParams]="{'coord': event.geom.coord, 'info': event.info}" 
-          block>
-          {{event.nom}}
-  </button>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Albergues turísticos</ion-label>
+      <ion-toggle [(ngModel)]= "toggle_alb_tur" color="primary"></ion-toggle>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Alojamientos turísticos</ion-label>
+      <ion-toggle [(ngModel)]= "toggle_alo_tur" color="secondary"></ion-toggle>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Alojamientos rurales</ion-label>
+      <ion-toggle [(ngModel)]= "toggle_alo_rur" color="danger"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Campings</ion-label>
+      <ion-toggle [(ngModel)]= "toggle_camp" color="morat"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Hoteles</ion-label>
+      <ion-toggle [(ngModel)]= "toggle_hot" color="taronja"></ion-toggle>
+    </ion-item>
+  
+  </ion-list>
+
+
+<button ion-button 
+        [navPush]="mapa" 
+        [navParams] = "{'toggle_alb_tur': toggle_alb_tur, 'toggle_alo_rur': toggle_alo_rur, 'toggle_alo_tur': toggle_alo_tur, 'toggle_camp': toggle_camp, 'toggle_hot': toggle_hot}"
+        block>
+        APLICAR
+</button>
 
 </ion-content>
